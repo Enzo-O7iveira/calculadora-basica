@@ -1,0 +1,14 @@
+body{
+    background: gray;
+    color: white;
+    font: Normal 15pt Arial ;
+}
+    div#calculadora{
+        background: gray;
+        text-align: center;
+    }
+    footer{
+        text-align: center;
+        font: Normal 20pt Times;
+        
+    }
