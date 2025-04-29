@@ -4,18 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Teste</title>
+    <link rel="stylesheet" href="calculadora-basica.css">
 
-    <style> 
-    body{
-        background: gray;
-        color: white;
-        font: Normal 15pt Arial ;
-    }
-        div#calculadora{
-            background: gray;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
     <div id="calculadora">
@@ -26,65 +16,18 @@
         <input type="number" name="txt2" id="txt2">
             <div id="teste">
                 <input type="button" value="Soma" onclick="somar()"> 
-                <input type="button" value="Multiplicação" onclick="dividir()">  
+                <input type="button" value="Multiplicação" onclick="multiplicar()">  
+                <input type="button" value="Dividir" onclick="divisao()">
+                <input type="button" value="Subtrair" onclick="subtracao()">
             </div>
+            <br>
         <div id="resultado">
-            <p>Aqui está o resultado</p>
+            <p><strong><b>O resultado aparece aqui!!</b></strong></p>
         </div>
     </div>
-<script>
-/* Código calculadora*/
-        /*Criando a váriavel 'somando' em prol do uso da função 'cliquei'*/
-    var somando = document.querySelector('div#teste')
-    somando.addEventListener('click', cliquei)
-
-/* Aqui estava testando o comando "add.EventListener" para ver como funcionava nessa ocasião  
-    somando.addEventListener('mouseenter', entrei)
-    somando.addEventListener('mouseout', saida)*/
-    
-   /*Chamando a função de somar os números inseridos*/ 
-    function somar(){
-    var n1 = document.getElementById('txt1')
-    var n2 = document.getElementById('txt2')
-
-        var resultado = document.getElementById('resultado')
-    
-    var somaN1 = Number(txt1.value)
-    var somaN2 = Number(txt2.value)
-
-    var somaAmbos = somaN1 + somaN2
-    resultado.innerHTML = `A soma de ${somaN1} e ${somaN2} é igual a ${somaAmbos}`
-    }
-
-    function dividir(){
-        var n1 = document.getElementById('txt1')
-        var n2 = document.getElementById('txt2')
-            var resultado = document.getElementById('resultado')
-            var somaN1 = Number(txt1.value)
-            var somaN2 = Number(txt2.value)
-        
-        var divideAmbos = somaN1 * somaN2
-        resultado.innerHTML = `A multiplicação de ${somaN1} e ${somaN2} é igual a ${divideAmbos}`
-    }
-    /*Chamando a função de clicar*/
-    function cliquei(){
-        somando.innerHTML = ` <strong>Aqui está sua resposta <strong>`
-        somando.style.background = 'gray'
-        somando.style.color = 'black'
-    }
-    
-/*Chamando as funções de 'mouseout' e 'mouseenter' para teste
-    
-    /*function entrei(){
-        somando.innerHTML = `Entrou`
-        somando.style.background = 'gray'
-    }
-    function saida(){
-        somando.innerHTML = `Saiu`
-        somando.style.background = 'red'
-    }
-*/
-
-</script>
+<script src="calculadora-basica.js"></script>
+<footer>
+    <p><strong>&copy; Enzo O7iveira</strong></p>
+</footer>
 </body>
 </html>
